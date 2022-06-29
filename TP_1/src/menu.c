@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "funciones.h"
+
+#include "menu.h"
 
 
 int mainMenu(float kilometros, float precioArgentinas, float precioLatam){

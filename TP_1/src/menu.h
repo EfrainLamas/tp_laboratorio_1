@@ -1,7 +1,7 @@
 
 
-#ifndef FUNCIONES_H_
-#define FUNCIONES_H_
+#ifndef MENU_H_
+#define MENU_H_
 
 /// @fn int mainMenu(float, float, float)
 /// @brief al ejecutarse recibe los precios y kilometros ingresados por el usuario y le solicita una opcion y la retorna
@@ -52,4 +52,4 @@ float ingressPrice(int);
 void mostrar(float, float, float, float, float, float, float, float, float, float, float, float);
 
 
-#endif /* FUNCIONES_H_ */
+#endif /* MENU_H_ */

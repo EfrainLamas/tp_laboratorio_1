@@ -10,7 +10,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "funciones.h"
+#include "menu.h"
+#include "calculos.h"
 
 
 int main(void){
@@ -19,6 +20,7 @@ int main(void){
 		opciones,
 		opcionAerolineas,
 		flagPrecio = 0;
+	int	flagCostos = 0;
 	float kilometros,
 		  precioArgentinas,
 		  precioLatam,
@@ -66,14 +68,20 @@ int main(void){
 				precioUnitarioAerolineasA = unitPrice(precioArgentinas, kilometros);
 				diferenciaPrecio = difference(precioArgentinas, precioLatam);
 				printf("Se calcularon los costos correctamente\n");
+				flagCostos = 1;
 			}else{
 				printf("Error, no se ingresaron precios o kilometros\n");
 			}
 			system("pause");
 			break;
 		case 4:
-			mostrar(precioLatam, precioArgentinas, kilometros, precioDebitoLatam, precioCreditoLatam, precioBtcLatam, precioUnitarioLatama, precioDebitoAerolineasA, precioCreditoAerolineasA,
+			if(flagCostos == 1){
+					mostrar(precioLatam, precioArgentinas, kilometros, precioDebitoLatam, precioCreditoLatam, precioBtcLatam, precioUnitarioLatama, precioDebitoAerolineasA, precioCreditoAerolineasA,
 					precioBtcAerolineasA, precioUnitarioAerolineasA, diferenciaPrecio);
+			}
+			else{
+				printf("Error, se deben calcular los costos antes de informar los resultados\n");
+			}
 			system("pause");
 			break;
 		case 5:
